@@ -6,6 +6,7 @@
         <!-- Searchbox -->
         <shared-search-box
         (onValue)="searchByCountry($event)"
+        (onDebounce)="searchByCountry($event)"
         placeholder="Buscar por Pais"
         ></shared-search-box>
     </div>
@@ -15,6 +16,7 @@
     <div class="col">
         <!-- Tabla de Resultados -->
         <ul>
+            <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
             <countries-table
             [countries]="countries"
             ></countries-table>
