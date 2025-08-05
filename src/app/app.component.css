@@ -1,0 +1,11 @@
+.content{
+    overflow: hidden;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+shared-sidebar{
+    display: block;
+    z-index: 5;
+    position: relative;
+}
